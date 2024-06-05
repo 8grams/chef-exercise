@@ -1,0 +1,18 @@
+# kitchen init --create-gemfile
+# bundle install
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos-8
+    driver:
+      box: centos/8
+
+suites:
+  - name: default
+    run_list:
+    attributes:
