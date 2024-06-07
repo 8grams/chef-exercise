@@ -1,9 +1,9 @@
 # chef-apply hello.rb
-# file './hello.txt' do
-#     content 'Hello, world!!!'
-# end
+file './../result/hello.txt' do
+    content 'Hello, world!!!'
+end
 
 # uninstall
-file './hello.txt' do
-    action :delete
-end
+# file './../result/hello.txt' do
+#     action :delete
+# end

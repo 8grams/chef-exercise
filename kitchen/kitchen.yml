@@ -1,12 +1,23 @@
 # kitchen init --create-gemfile
 # bundle install
+
+# list instance: kitchen list
+# create instance: kitchen create default-centos-8 ~> [suites name]-[platforms name]
+# check running vbox: VBoxManage list runningvms
+
+# login: kitchen login default-centos-8
 ---
+
+# specify driver to use. More drivers: https://docs.chef.io/workstation/kitchen/#drivers
 driver:
   name: vagrant
 
+# The component on which the Chef Infra Client code will be run
+# can be chef_zero (https://github.com/chef/chef-zero) or chef_solo (https://docs.chef.io/chef_solo)
 provisioner:
   name: chef_solo
 
+# want another distribution? Check https://app.vagrantup.com/boxes/search (if using Vagrant)
 platforms:
   - name: centos-8
     driver:
